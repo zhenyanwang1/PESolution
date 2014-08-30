@@ -37,7 +37,6 @@ def convert(n):
 snums = []
 for i in range(1, 1000 + 1):
     snums.append(convert(i))
-print(snums)
 total = 0
 for snum in snums:
     for chr in snum:
