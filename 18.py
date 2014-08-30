@@ -1,5 +1,6 @@
 import numpy
-data="""75
+
+data = """75
 95 64
 17 47 82
 18 35 87 10
@@ -14,16 +15,16 @@ data="""75
 91 71 52 38 17 14 91 43 58 50 27 29 48
 63 66 04 68 89 53 67 30 73 16 69 87 40 31
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23"""
-arr_data=[line.split(" ") for line in data.split("\n")]
+arr_data = [line.split(" ") for line in data.split("\n")]
 for row in range(len(arr_data)):
     for item in range(len(arr_data[row])):
-        arr_data[row][item]=int(arr_data[row][item])
-arr=numpy.array(arr_data)
+        arr_data[row][item] = int(arr_data[row][item])
+arr = numpy.array(arr_data)
 print(arr)
-for y in range(15-2,-1,-1):
-    for x in range(y+1):
+for y in range(15 - 2, -1, -1):
+    for x in range(y + 1):
         if arr[y + 1][x] < arr[y + 1][x + 1]:
-            arr[y][x]+= arr[y + 1][x + 1]
+            arr[y][x] += arr[y + 1][x + 1]
         elif arr[y + 1][x] > arr[y + 1][x + 1]:
             arr[y][x] += arr[y + 1][x]
 print(arr[0][0])
