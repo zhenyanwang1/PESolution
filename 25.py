@@ -3,9 +3,11 @@ def fib():
     while True:
         yield a
         a, b = b, a + b
-pos=1
+
+
+pos = 1
 for n in fib():
-    if len(str(n))==1000:
+    if len(str(n)) == 1000:
         print(pos)
         break
-    pos+=1
+    pos += 1

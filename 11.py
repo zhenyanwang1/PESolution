@@ -51,5 +51,5 @@ for i in range(0, 16 + 1):
         products.append(arr[i, j] * arr[i + 1, j + 1] * arr[i + 2, j + 2] * arr[i + 3, j + 3])
 for i in range(3, 20):
     for j in range(0, 16 + 1):
-        products.append(arr[i, j] * arr[i - 1, j + 1] * arr[i - 2, j + 2] * arr[i - 3, j + 3]) #FTW!
+        products.append(arr[i, j] * arr[i - 1, j + 1] * arr[i - 2, j + 2] * arr[i - 3, j + 3])  # FTW!
 print(sorted(products))
