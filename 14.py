@@ -8,7 +8,6 @@ def chain(n):
         else:
             n = 3 * n + 1
 
-
 ret = []
 for n in range(1, 1000000):
     ret.append((n, len(list(chain(n)))))

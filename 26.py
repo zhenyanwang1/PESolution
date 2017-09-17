@@ -1,10 +1,11 @@
 def rcl(n):
-    initial = 1 % n
-    remainder = initial
-    remainders = [initial]
+    remainder = 10 % n
+    remainders = []
     while True:
-        if not remainder * 10 % n in remainders:
-            remainder = remainder * 10 % n
+        remainder = remainder * 10 % n
+        if remainder == 0:
+            return 0
+        if not remainder in remainders:
             remainders.append(remainder)
         else:
             return len(remainders)

@@ -33,7 +33,7 @@ def convert(n):
     elif n == 1000:
         return "one thousand"
 
-
+print(convert(990))
 snums = []
 for i in range(1, 1000 + 1):
     snums.append(convert(i))
